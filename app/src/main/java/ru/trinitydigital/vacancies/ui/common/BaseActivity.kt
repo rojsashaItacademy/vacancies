@@ -21,7 +21,7 @@ abstract class BaseActivity : AppCompatActivity() {
         val exit = PrimaryDrawerItem().withName(R.string.exit).withIdentifier(3)
             .withIcon(R.drawable.icon_exit)
 
-        val drawer = DrawerBuilder()
+        DrawerBuilder()
             .withActivity(this)
             .withToolbar(toolbar)
             .withSelectedItem(-1)
@@ -37,8 +37,6 @@ abstract class BaseActivity : AppCompatActivity() {
                 exit
             )
             .build()
-
-
     }
 
     private fun createAccountHeader(): AccountHeader {
